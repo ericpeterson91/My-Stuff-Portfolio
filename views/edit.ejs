@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
+    <title>Edit Item</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Edit Item</h1>
+        <div class="form-group">
+            <form action="/<%=item.id%>?_method=PUT" method="POST">
+                <div class="row">
+            <label for="name">Item Name</label>
+              <input type="text" value="<%= item.name %>" name="name" id="name">
+            </div> <br><div class="row">
+                <!-- If I have time, make it so the user has to input the price in the correct format -->
+              <label for="purchasePrice">Item Price (CAD$)</label>
+              <input type="text" value="<%= item.purchasePrice %> " placeholder="Enter dollar amount. Integers only" name="purchasePrice" id="purchasePrice">
+            </div><br><div class="row">
+              <label for="purchaseDate">Purchase Date</label> 
+              <input type="date" name="purchaseDate" value="<%= item.purchaseDate.toLocaleDateString() %>"> 
+            </div> <br><div class="row">
+                <!-- Maybe don't include this yet? -->
+              <!-- <label for="comment">Comments</label>  
+              <input type="text" name="comment"> -->
+            </div>
+              <button type="submit" class="btn btn-primary">Update item</button>
+              <a href="./../"><button class="btn btn-secondary">home page</button></a>
+          </form>
+        </div> 
+      </form>
+    </div><br>
+    <div class="container">
+   <!-- <a href="./../"><button class="btn btn-secondary">home page</button></a> -->
+    </div>
+</body>
+</html>

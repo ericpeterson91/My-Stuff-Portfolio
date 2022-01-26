@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/<%= item.id %>" method="POST">
+        <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
+        <input type="submit" value="submit">
+    </form>
+    <h1>
+        Comments
+    </h1>
+    <ul>
+        <% item.comment.forEach(c => { %>
+            <li><%= c.comment %> </li>
+        <% }) %>
+    </ul>    
+</body>
+</html>
