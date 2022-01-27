@@ -58,8 +58,11 @@ async function deleteOne(req, res) {
 }
 
 async function deleteComments(req, res) {
-    await Item.comment.findByIdAndDelete(req.params.id)
-    res.redirect('/:id/comment')
+    let item = await Item.findById(req.params.id)
+    item.comment = [];
+    // await Item.comment.findByIdAndDelete(req.params.id)
+    await item.save()
+    res.redirect(`/${req.params.id}/comment`)
 }
 
 

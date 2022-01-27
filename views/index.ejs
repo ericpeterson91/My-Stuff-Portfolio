@@ -5,29 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
-    <script>
-      const amount = parseInt(document.querySelector('#sum').substring(1)) //maybe need to parseInt here
-
-      function convertToUSD() {
-        fetch('https://api.exchangeratesapi.io/latest?base=CAD')
-        .then(response => response.json())
-        .then(data => {
-          const rate = data.rates.USD
-          amount.innerHTML = (rate.toFixed(2) * amount)
-
-        })
-      }
-      function convertToCAD() {
-        fetch('https://api.exchangeratesapi.io/latest?base=USD')
-        .then(response => response.json())
-        .then(data => {
-          const rate = data.rates.CAD
-          amount.innerHTML = (rate.toFixed(2) * amount) 
-
-        })
-      }
-
-    </script>
+    
   </head>
   <body>
   
@@ -82,15 +60,50 @@
           
           <% }) %> 
           <h3 class="total-value">Total Item Value:</h3>
-          <h4 id="sum">$<%=(totalValue) %> </h4>
+          <h4>$<span id="sum"><%=(totalValue.toFixed(2)) %></span> in CAD </h4>
+
+         <div><h4>
+          <span>$</span><span id="convertedSum"> </span><span> in USD</span>
+        </h4>
+        </div>
+          
 
 
-          <button onclick="convertToUSD()">Convert to USD</button>
-          <button onclick="convertToCAD()">Convert to CAD</button>
+
+          <!-- <button onclick="convertToUSD()">Convert to USD</button>
+          <button onclick="convertToCAD()">Convert to CAD</button> -->
 
     </div>
  
     <% } %>
+
+    <script>
+    
+    //   https://api.exchangeratesapi.io/v1/convert
+    // ? access_key = API_KEY
+    // & from = GBP
+    // & to = JPY
+    // & amount = 25
+
+    const baseAmount = parseInt(document.querySelector('#sum').innerHTML)
+    let convertedAmount = document.querySelector('#convertedSum')
+
+      console.log(document.querySelector('#sum').textContent)
+
+    let convertedValue = function() {
+      fetch(`http://api.exchangeratesapi.io/v1/convert?access_key=51a52e2b10142f3ee5d3343418351557&from=CAD&to=USD&amount=${baseAmount}`)
+    .then(res=>res.json())
+        .then(data => {
+          console.log(data)
+          convertedAmount.innerHTML = data.result.toFixed(2)
+        
+      })}
+      
+      convertedValue()
+      
+      // convertedAmount.innerHTML = data)
+
+    </script>
   </body>
 </html>
 

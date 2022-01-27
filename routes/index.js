@@ -67,6 +67,10 @@ router.put('/:id', async function(req, res){
 
 router.delete('/:id', itemCtrl.deleteOne)
 
+router.delete('/:id/comment', itemCtrl.deleteComments)
+
+
+
 
 // router.get('/:id/comment', function(req, res) {
 //   res.render('comment')
