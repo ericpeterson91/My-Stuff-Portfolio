@@ -53,3 +53,8 @@ width: 50vw;
   margin-top: 30px;
   color: rgb(99, 99, 99)
 }
+
+#comment-id {
+  height: 20px;
+  width: 40px;
+}
