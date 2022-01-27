@@ -29,7 +29,7 @@ input {
   background-color: rgb(231, 231, 231);
 }
 .container {
-width: 70vw;
+width: 50vw;
 }
 .edit {
   background-color: rgb(10, 100, 10);
@@ -41,6 +41,9 @@ width: 70vw;
 
 .button-box {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
 }
 
 .total-value {
