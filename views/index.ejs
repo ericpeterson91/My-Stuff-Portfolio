@@ -35,6 +35,17 @@
       <h1 class="head-title">My Stuff Portfolio</h1>
       <h4>Track what you own</h4>
 
+      <ul class="right">
+        <li>
+        <% if (user) { %>
+          <a href="/logout"><i class="material-icons left"></i>Log Out from Google</a>
+        <% } else { %>
+          <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+        <% } %>
+        </li>
+      </ul>
+
+      <% if (user) { %>
     <a href="/new"><button class="btn btn-primary">Add Item</button></a>      
 
       <h1 class="all-items">All Items</h1>
@@ -77,6 +88,8 @@
 
     </div>
  
-    
+    <% } %>
   </body>
 </html>
+
+

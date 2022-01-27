@@ -3,31 +3,31 @@ const itemCtrl = require('./../controllers/items')
 var router = express.Router();
 const Item = require('../models/item')
 
-// const passport = require('passport');
+const passport = require('passport');
 
 
 
 router.get('/', itemCtrl.index)
 
-// // Google OAuth login route
-// router.get('/auth/google', passport.authenticate(
-//   'google',
-//   { scope: ['profile', 'email'] }
-// ));
+// Google OAuth login route
+router.get('/auth/google', passport.authenticate(
+  'google',
+  { scope: ['profile', 'email'] }
+));
 
-// router.get('/oauth2callback', passport.authenticate(
-//   'google',
-//   {
-//     successRedirect : '/index',
-//     failureRedirect : '/index'
-//   }
-// ));
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+    successRedirect : '/',
+    failureRedirect : '/'
+  }
+));
 
 // OAuth logout route
-// router.get('/logout', function(req, res){
-//   req.logout();
-//   res.redirect('/index');
-// });
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
 
 router.get('/new', function(req, res) {
   res.render('new')

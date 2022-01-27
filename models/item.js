@@ -22,7 +22,7 @@ const itemSchema = new mongoose.Schema({
         required: false
     },
     comment: [commentSchema],
-    googleId: String
+    user: String
 })
 
 module.exports = mongoose.model('Item', itemSchema)

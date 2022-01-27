@@ -18,29 +18,40 @@ function update(req, res){
 
 
 async function create(req, res) {
-    console.log(req.body)
-    // Item.create(req.body)
+    req.body.user = req.user._id
     const item = await new Item(req.body)
     // item.sort({purchaseDate: 'desc'})
     item.save()
     res.redirect('/')
 
-    // console.log(req.body)
+    
 }
 
+
+function getUserStatus(status) {
+    if (status) return status
+    else return null
+   }
+
 function index(req, res) {
-    // Item.sort({purchaseDate: 'desc'})
-    Item.find({}, function(err, i){
-        console.log(i)
+    let userStatus = getUserStatus(req.user)
+    let search;
+    if (userStatus) {
+         search = userStatus._id 
+       }
+       else {
+        search = {};
+       }
+    Item.find({user: search}, function(err, i){
         res.render('./index' , {
             items: i, 
-            // user: req.user,
-            // name2: req.user.name2,
-            // sortKey
+            user: req.user,
         })
     })
 }
 
+// sortKey
+// name2: req.user.name2,
 async function deleteOne(req, res) {
     await Item.findByIdAndDelete(req.params.id)
     res.redirect('/')
