@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect( process.env.DATABASE_URL
+mongoose.connect( "mongodb://localhost/items" || process.env.DATABASE_URL
 , {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -19,3 +19,5 @@ db.on('connected', function () {
 module.exports = db;
 
 // "mongodb://localhost/items" ||
+
+// || process.env.DATABASE_URL

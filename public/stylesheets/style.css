@@ -29,7 +29,7 @@ input {
   background-color: rgb(231, 231, 231);
 }
 .container {
-width: 50vw;
+width: 70vw;
 }
 .edit {
   background-color: rgb(10, 100, 10);
@@ -37,6 +37,10 @@ width: 50vw;
 }
 .card-title {
   font-weight: bold;
+}
+
+.button-box {
+  display: flex;
 }
 
 .total-value {

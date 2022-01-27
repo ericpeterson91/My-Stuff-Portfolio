@@ -61,12 +61,14 @@
               <h5><%= item.purchaseDate.toLocaleDateString() %> </h5>
          
 
-          <a  class="btn btn-secondary" href="/<%= item.id%>/comment">Item notes</a>    
+              <div class="button-box">
+          <a  class="btn btn-secondary" href="/<%= item.id%>/comment">Item notes</a>   
           <a  class="btn edit" href="/<%= item.id%>/edit">Edit</a>  
           <form method="POST" action="/<%= item.id%>?_method=DELETE">
-          <button class="btn btn-danger">
-            Delete
-          </button>
+            <button class=" d-inline btn btn-danger">
+              Delete
+            </button>
+          </div> 
         </form>  
         
 
