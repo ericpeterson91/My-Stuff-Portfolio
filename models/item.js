@@ -21,7 +21,8 @@ const itemSchema = new mongoose.Schema({
         default: new Date(),
         required: false
     },
-    comment: [commentSchema]
+    comment: [commentSchema],
+    googleId: String
 })
 
 module.exports = mongoose.model('Item', itemSchema)

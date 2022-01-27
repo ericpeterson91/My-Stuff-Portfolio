@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style-type: none;
+  margin: 20px 0;
 }
 
 a {
@@ -13,11 +22,34 @@ label {
 }
 
 input {
-  height: 30px;
+  height: 50px;
 }
-
+.card {
+  border: 5px solid rgb(0, 8, 124);
+  background-color: rgb(231, 231, 231);
+}
 .container {
- 
 width: 50vw;
 }
+.edit {
+  background-color: rgb(10, 100, 10);
+  color: white;
+}
+.card-title {
+  font-weight: bold;
+}
 
+.total-value {
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-top: 10px;
+}
+
+.head-title {
+  font-weight: bold;
+}
+
+.all-items {
+  margin-top: 30px;
+  color: rgb(99, 99, 99)
+}

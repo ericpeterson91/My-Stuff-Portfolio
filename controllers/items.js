@@ -5,7 +5,8 @@ module.exports = {
     show,
     index,
     deleteOne, 
-    update
+    update, 
+    deleteComments
 }
 
 function update(req, res){
@@ -31,7 +32,12 @@ function index(req, res) {
     // Item.sort({purchaseDate: 'desc'})
     Item.find({}, function(err, i){
         console.log(i)
-        res.render('./index' , {items: i})
+        res.render('./index' , {
+            items: i, 
+            // user: req.user,
+            // name2: req.user.name2,
+            // sortKey
+        })
     })
 }
 
@@ -40,18 +46,14 @@ async function deleteOne(req, res) {
     res.redirect('/')
 }
 
+async function deleteComments(req, res) {
+    await Item.comment.findByIdAndDelete(req.params.id)
+    res.redirect('/:id/comment')
+}
 
 
 
 
-
-// function comment(req, res) {
-//     // Item.sort({purchaseDate: 'desc'})
-//     Item.findById({}, function(err, i){
-//         console.log(i)
-//         res.render('./comment' , {items: i})
-//     })
-// }
 
 
 
