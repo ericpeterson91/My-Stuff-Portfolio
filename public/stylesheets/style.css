@@ -31,6 +31,12 @@ input {
 .container {
 width: 50vw;
 }
+
+.comment-item {
+  margin: 10px;
+  font-size: 1.4rem;
+}
+
 .edit {
   background-color: rgb(10, 100, 10);
   color: white;
@@ -39,12 +45,12 @@ width: 50vw;
   font-weight: bold;
 }
 
-.button-box {
+/* .button-box {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 10px;
-}
+} */
 
 .total-value {
   font-weight: bold;
