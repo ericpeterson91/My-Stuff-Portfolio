@@ -1,5 +1,5 @@
 
-#My Stuff Portfolio
+# My Stuff Portfolio
 
 My second project is an app to track items a user owns in the physical world. The user enters items they own in the physical world (eg. couch, desk, etc.), the cost of each item, and the purchase date. 
 
@@ -12,25 +12,25 @@ Users are able to edit and delete items whenever they want. Users are also able 
 Users log in with their Google account using Google OAuth.
 
 
-#Screenshots
+# Screenshots
 
-<img src='https://imgur.com/gallery/oMf4ZVq' alt='portfolio stuff'>
+https://imgur.com/gallery/oMf4ZVq 
 
-#Technologies Used
+# Technologies Used
 
 Node JS, Express JS, MongoDB, Mongoose, exchangeratesapi.io, Google OAuth, EJS/HTML
 
-#Getting Started
+# Getting Started
 
-##Heroku Link:
+## Heroku Link:
 
 http://erics-project.herokuapp.com/
 
-##Trello Link:
+## Trello Link:
 
 https://trello.com/b/Uss5yAli/value-of-owned-physical-items-stuff-portfolio
 
-#Next Steps
+# Next Steps
 
 Change the API fetch function so I can keep the API for free. I want to show this project on my GitHub now and into the future, and I don't want to pay for this API forever. 
 
