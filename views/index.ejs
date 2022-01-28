@@ -8,24 +8,31 @@
     
   </head>
   <body>
+    <section class="top">
+      
+    </section>
+
+    
+    
   
-    <div class="container">
+    <div class="head-container">
       <h1 class="head-title">My Stuff Portfolio</h1>
-      <h4>Track what you own</h4>
+      <h4 class="track">Track what you own</h4>
+      <div class="google"></div>
 
       <ul class="right">
         <li>
         <% if (user) { %>
-          <a href="/logout"><i class="material-icons left"></i>Log Out from Google</a>
+          <a class="google" href="/logout">Log Out from Google</a>
         <% } else { %>
-          <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+          <a class="google" href="/auth/google">Login with Google</a>
         <% } %>
         </li>
       </ul>
-
       <% if (user) { %>
-    <a href="/new"><button class="btn btn-primary">Add Item</button></a>      
-
+    <a href="/new"><button class="btn add">Add Item</button></a> 
+    </div>     
+    <div class="item-container">
       <h1 class="all-items">All Items</h1>
       <% items.forEach(item => { %>
         <div class="card mt-4">
@@ -53,7 +60,7 @@
           </div>
         </div>
         <% }) %>
-        
+      </div>
         <% let totalValue = 0 %> 
         <% items.forEach(item => { %> 
           <%  totalValue += parseInt(item.purchasePrice.substring(1)) %>
@@ -72,8 +79,10 @@
 
           <!-- <button onclick="convertToUSD()">Convert to USD</button>
           <button onclick="convertToCAD()">Convert to CAD</button> -->
-
-    </div>
+        </div>
+        <section class="bottom">
+    
+        </section>
  
     <% } %>
 

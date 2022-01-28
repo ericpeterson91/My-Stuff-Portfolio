@@ -1,8 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+  --main-text-color: rgb(0, 8, 124);
+}
+
+.top {
+  height: 7vh;
+  top: 0;
+}
+
+.add{
+  background-color: var(--main-text-color);
+  color: rgb(255, 255, 255);
+}
+
+.add:hover {
+  color: rgb(220, 220, 220);
+}
+
+.bottom {
+  height: 7vh;
+  bottom: 0;
+}
+
+.track {
+  margin-top: 20px;
+  color: var(--main-text-color)
+}
+
+.google {
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 30px;
+}
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
@@ -21,15 +53,32 @@ label {
   font-size: 1.6em;
 }
 
+img {
+  height: 30px;
+  width: 30px;
+}
+
 input {
   height: 50px;
 }
 .card {
-  border: 5px solid rgb(0, 8, 124);
-  background-color: rgb(231, 231, 231);
+  border: 5px solid var(--main-text-color);
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.container {
-width: 50vw;
+.head-container {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.item-container {
+width: 35vw;
 }
 
 .comment-item {
@@ -55,15 +104,17 @@ width: 50vw;
 .total-value {
   font-weight: bold;
   color: rgb(73, 73, 73);
-  margin-top: 10px;
+  margin-top: 70px;
 }
 
 .head-title {
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .all-items {
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   color: rgb(99, 99, 99)
 }
 
@@ -71,3 +122,9 @@ width: 50vw;
   height: 20px;
   width: 40px;
 }
+
+section {
+  background-color: var(--main-text-color);
+  width: 100%;
+}
+
