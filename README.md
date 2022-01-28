@@ -18,7 +18,7 @@ https://imgur.com/gallery/oMf4ZVq
 
 # Technologies Used
 
-Node JS, Express JS, MongoDB, Mongoose, exchangeratesapi.io, Google OAuth, EJS/HTML
+Node JS, Express JS, MongoDB, Mongoose, exchangeratesapi.io, Google OAuth, EJS/HTML, CSS, Heroku
 
 # Getting Started
 
