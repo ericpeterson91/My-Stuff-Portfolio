@@ -15,7 +15,7 @@
     <div class="edit-container">
         <h1>Edit Item</h1>
         <div>
-            <form action="/<%=item.id%>?_method=PUT" method="POST">
+            <form autocomplete="off" action="/<%=item.id%>?_method=PUT" method="POST">
                 <div class="row">
             <label for="name">Item Name</label>
               <input type="text" value="<%= item.name %>" name="name" id="name">

@@ -15,7 +15,7 @@
     <h2 class="note-title">
         <%= item.name %> 
     </h2>
-    <form action="/<%= item.id %>/comment" method="POST">
+    <form autocomplete="off" action="/<%= item.id %>/comment" method="POST">
         <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
         <div><input class="btn btn-add-3" type="submit" value="Submit"></div>
     </form>
