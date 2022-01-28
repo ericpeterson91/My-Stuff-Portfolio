@@ -74,7 +74,6 @@
       fetch(`http://api.exchangeratesapi.io/v1/convert?access_key=51a52e2b10142f3ee5d3343418351557&from=CAD&to=USD&amount=${baseAmount}`)
          .then(res=>res.json())
          .then(data => {
-          console.log(data)
           convertedAmount.innerHTML = data.result.toFixed(2) 
       })}
       

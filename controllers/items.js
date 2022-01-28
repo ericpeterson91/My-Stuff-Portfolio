@@ -11,7 +11,7 @@ module.exports = {
 
 function update(req, res){
     const item = Item.findById(req.params.id) 
-    }
+}
     
 async function create(req, res) {
     req.body.user = req.user._id
@@ -24,7 +24,7 @@ async function create(req, res) {
 function getUserStatus(status) {
     if (status) return status
     else return null
-   }
+}
 
 function index(req, res) {
     let userStatus = getUserStatus(req.user)
@@ -57,6 +57,6 @@ async function deleteComments(req, res) {
 
 function show(req, res) { 
     Item.findById(req.params.id, function(err, item) {
-            res.render('./index', { Item });  
-        })  
-  }
+        res.render('./index', { Item });  
+ })  
+}
