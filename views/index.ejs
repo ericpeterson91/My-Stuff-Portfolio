@@ -30,7 +30,7 @@
       <% items.forEach(item => { %>
         <div class="card">
           <h2 class="card-title"><%= item.name %> <span class="money"><%= item.purchasePrice %> </span></h2>
-          <h2 class="date"> <%= item.purchaseDate.toLocaleDateString()%></h2>
+          <h2 class="date"> <%= item.purchaseDate%></h2>
           
           <div class="button-box">
               <a href="/<%= item.id%>/comment"><button class="btn comment-btn">Notes</button></a>
