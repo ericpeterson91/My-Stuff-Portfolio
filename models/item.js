@@ -14,12 +14,12 @@ const itemSchema = new mongoose.Schema({
     },
     purchasePrice: {
         type: String,
-        required: false
+        required: true
     },
     purchaseDate: {
         type: Date,
         default: new Date(),
-        required: false
+        required: true
     },
     comment: [commentSchema],
     user: String
