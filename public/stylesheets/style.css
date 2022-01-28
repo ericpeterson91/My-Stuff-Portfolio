@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+
+body {
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --main-text-color: rgb(0, 8, 124);
 }
 
 .top {
-  height: 7vh;
+  height: 9vh;
   top: 0;
 }
 
@@ -22,21 +31,28 @@
   height: 7vh;
   bottom: 0;
 }
+.head-title {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 40px;
+}
 
 .track {
-  margin-top: 20px;
-  color: var(--main-text-color)
+  margin-top: 10px;
+  color: var(--main-text-color);
+  font-size: 24px;
+  margin-left: 70px;
 }
 
 .google {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5rem;
   margin-right: 30px;
+  color:rgb(203, 249, 0);
 }
-body {
-  padding: 50px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+
+.google:hover {
+  color:rgb(181, 221, 0);
 }
 
 li {
@@ -71,7 +87,7 @@ input {
   justify-content: center;
 }
 .head-container {
-  width: 60vw;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,6 +95,23 @@ input {
 }
 .item-container {
 width: 35vw;
+}
+
+.add-btn {
+  height: 40px;
+  width: 120px;
+  color: rgb(255, 255, 255);
+  background-color: var(--main-text-color);
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: -10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.add-btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 9, 140);
+  color:rgb(182, 182, 182);
 }
 
 .comment-item {
@@ -105,17 +138,18 @@ width: 35vw;
   font-weight: bold;
   color: rgb(73, 73, 73);
   margin-top: 70px;
+  font-size: 32px;
 }
 
-.head-title {
-  font-weight: bold;
-  margin-top: 20px;
+.sum {
+  font-size: 20px;
 }
 
 .all-items {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  color: rgb(99, 99, 99)
+  color: rgb(99, 99, 99);
+  font-size: 40px;
 }
 
 #comment-id {
@@ -125,6 +159,26 @@ width: 35vw;
 
 section {
   background-color: var(--main-text-color);
-  width: 100%;
+  width: 100vw;
+}
+
+.bottom-container {
+  margin: 0;
+}
+
+.top-sum {
+  margin-bottom: -15px;
+}
+
+.sum {
+  font-size: 22px;
+}
+
+.cad {
+  color: rgb(255, 0, 0);
+}
+
+.usd {
+  color: rgb(0, 153, 255);
 }
 
