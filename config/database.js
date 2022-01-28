@@ -6,10 +6,6 @@ mongoose.connect("mongodb://localhost/items" || process.env.DATABASE_URL
   useUnifiedTopology: true
 });
 
-//when do I include the mongoDB database? also what is the deal with mongoDB saying to change the firstDatabase line to _____? (check mongoDB website) 
-
-
-// shortcut to mongoose.connection object
 const db = mongoose.connection;
 
 db.on('connected', function () {

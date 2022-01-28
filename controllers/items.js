@@ -13,18 +13,11 @@ function update(req, res){
     const item = Item.findById(req.params.id) 
     }
     
-    //how do I pass down the correct item to the edit EJS page?
-
-
-
 async function create(req, res) {
     req.body.user = req.user._id
     const item = await new Item(req.body)
-    // item.sort({purchaseDate: 'desc'})
     item.save()
-    res.redirect('/')
-
-    
+    res.redirect('/') 
 }
 
 
@@ -50,8 +43,6 @@ function index(req, res) {
     })
 }
 
-// sortKey
-// name2: req.user.name2,
 async function deleteOne(req, res) {
     await Item.findByIdAndDelete(req.params.id)
     res.redirect('/')
@@ -60,23 +51,12 @@ async function deleteOne(req, res) {
 async function deleteComments(req, res) {
     let item = await Item.findById(req.params.id)
     item.comment = [];
-    // await Item.comment.findByIdAndDelete(req.params.id)
     await item.save()
     res.redirect(`/${req.params.id}/comment`)
 }
 
-
-
-
-
-
-
-
-
-
 function show(req, res) { 
     Item.findById(req.params.id, function(err, item) {
-            res.render('./index', { Item });  //change probably 
+            res.render('./index', { Item });  
         })  
-
   }

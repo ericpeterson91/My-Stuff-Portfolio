@@ -29,13 +29,12 @@
     <div class="item-container">
       <% items.forEach(item => { %>
         <div class="card">
-          <h2 class="card-title"><%= item.name %> </h2>
-          <h4><%= item.purchasePrice %> </h4>
-          <h5><%= item.purchaseDate.toLocaleDateString() %> </h5>
+          <h2 class="card-title"><%= item.name %> <span class="money"><%= item.purchasePrice %> </span></h2>
+          <h2 class="date"> <%= item.purchaseDate.toLocaleDateString() %></h2>
           
           <div class="button-box">
-              <button><a  class="btn notes-btn" href="/<%= item.id%>/comment">Item notes</a></button>
-              <button><a  class="btn edit-btn" href="/<%= item.id%>/edit">Edit</a></button>
+              <a href="/<%= item.id%>/comment"><button class="btn comment-btn">Notes</button></a>
+              <a href="/<%= item.id%>/edit"><button class="btn edit-btn" >Edit</button></a>
               <form method="POST" action="/<%= item.id%>?_method=DELETE">
                 <button class="btn danger-btn">Delete</button>
               </form>  
@@ -50,7 +49,7 @@
         <%  totalValue += parseInt(item.purchasePrice.substring(1)) %>
         
         <% }) %> 
-        <h3 class="total-value">Total Item Value:</h3>
+        <h3 class="total-value">Total Item Price:</h3>
         <h4 class="sum top-sum">$<span id="sum"><%=(totalValue.toFixed(2)) %></span> in <span class="cad">CAD</span> </h4>
 
         <div>
@@ -68,25 +67,19 @@
 
     <script>
 
-
     const baseAmount = parseInt(document.querySelector('#sum').innerHTML)
     let convertedAmount = document.querySelector('#convertedSum')
 
-      console.log(document.querySelector('#sum').textContent)
-
     let convertedValue = function() {
       fetch(`http://api.exchangeratesapi.io/v1/convert?access_key=51a52e2b10142f3ee5d3343418351557&from=CAD&to=USD&amount=${baseAmount}`)
-    .then(res=>res.json())
-        .then(data => {
+         .then(res=>res.json())
+         .then(data => {
           console.log(data)
-          convertedAmount.innerHTML = data.result.toFixed(2)
-        
+          convertedAmount.innerHTML = data.result.toFixed(2) 
       })}
       
-      convertedValue()
+    convertedValue()
       
-      // convertedAmount.innerHTML = data)
-
     </script>
   </body>
 </html>
