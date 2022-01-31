@@ -293,6 +293,10 @@ textarea {
     margin-top: 10px;
   }
 
+  input[type="date"] {
+    width: 40vw;
+  }
+
   .btn-add-3 {
     width: 120px;
   }
