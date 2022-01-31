@@ -284,6 +284,10 @@ textarea {
   textarea {
     margin: 0 20px;
   }
+
+  #comment {
+    width: 70vw;
+  }
   .track {
     display: block;
     margin-right: 70px;
@@ -303,6 +307,10 @@ textarea {
 
   .btn-add-2 {
     font-weight: normal;
+  }
+
+  .comment-danger-btn {
+    margin-bottom: 100px;
   }
 
 
