@@ -277,10 +277,8 @@ textarea {
 
 @media only screen and (max-width: 500px) {
   .item-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
     margin: 0 20px;
   }
   textarea {
@@ -294,4 +292,14 @@ textarea {
     display: block;
     margin-top: 10px;
   }
+
+  .btn-add-3 {
+    width: 120px;
+  }
+
+  .btn-add-2 {
+    font-weight: normal;
+  }
+
+
 }

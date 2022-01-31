@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stuff Portfolio</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
@@ -32,7 +35,7 @@
           <h2 class="card-title"><%= item.name %> <span class="money"><%= item.purchasePrice %> </span></h2>
           <h2 class="date"> <%= item.purchaseDate.toLocaleDateString()%></h2>
           
-          <div class="button-box">
+          <div class="btn-card">
               <a href="/<%= item.id%>/comment"><button class="btn comment-btn">Notes</button></a>
               <a href="/<%= item.id%>/edit"><button class="btn edit-btn" >Edit</button></a>
               <form method="POST" action="/<%= item.id%>?_method=DELETE">
