@@ -285,6 +285,13 @@ textarea {
     margin: 0 20px;
   }
 
+
+  .danger-btn, .btn-add-2, .edit-btn, .comment-btn, .btn-home {
+    height: 45px;
+    width: 95px;
+    font-size: 17px;
+
+  }
   #comment {
     width: 70vw;
   }
