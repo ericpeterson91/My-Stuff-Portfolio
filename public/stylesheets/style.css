@@ -127,10 +127,19 @@ input {
 }
 
 .btn {
-  height: 30px;
-  width: 80px;
+  height: 35px;
+  width: 85px;
+  font-size: 15px;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
+}
+
+.btn-home-edit {
+  margin-left: 20px;
+}
+
+#comment-danger-btn {
+  margin-top: 20px;
 }
 
 .comment-btn {
@@ -275,6 +284,7 @@ textarea {
 }
 
 
+
 @media only screen and (max-width: 500px) {
   .item-container {
     display: flex;
@@ -290,8 +300,8 @@ textarea {
     height: 45px;
     width: 95px;
     font-size: 17px;
-
   }
+
   #comment {
     width: 70vw;
   }
@@ -317,8 +327,12 @@ textarea {
   }
 
   .comment-danger-btn {
+    margin-top: 30px;
     margin-bottom: 120px;
   }
 
+  .btn-home-edit {
+    margin-left: 20px;
+  }
 
 }
