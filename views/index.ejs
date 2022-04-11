@@ -26,9 +26,7 @@
       <% if (user) { %>
        <a href="/new"><button class="add-btn">Add Item</button></a> 
     </div>     
-
     <h1 class="all-items">All Items</h1>
-
     <div class="item-container">
       <% items.forEach(item => { %>
         <div class="card">
@@ -54,25 +52,20 @@
         <% }) %> 
         <h3 class="total-value">Total Purchase Price:</h3>
         <h4 class="sum top-sum">$<span id="sum"><%=(totalValue.toFixed(2)) %></span> in <span class="cad">CAD</span> </h4>
-
         <div>
-          <!-- <h4 class="sum">
+          <h4 class="sum">
             <span>$</span><span id="convertedSum"> </span><span> in <span class="usd">USD</span></span>
-        </h4> -->
+        </h4>
       </div>
     </div>
-
     <section class="bottom">
-
     </section>
  
     <% } %>
 
-    <!-- <script>
-
+    <script>
     const baseAmount = parseInt(document.querySelector('#sum').innerHTML)
     let convertedAmount = document.querySelector('#convertedSum')
-
     let convertedValue = function() {
       fetch(`http://api.exchangeratesapi.io/v1/convert?access_key=51a52e2b10142f3ee5d3343418351557&from=CAD&to=USD&amount=${baseAmount}`)
          .then(res=>res.json())
@@ -82,7 +75,7 @@
       
     convertedValue()
       
-    </script> -->
+    </script>
   </body>
 </html>
 
