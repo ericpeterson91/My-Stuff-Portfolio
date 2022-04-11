@@ -19,7 +19,7 @@ const itemSchema = new mongoose.Schema({
     purchaseDate: {
         type: Date,
         default: new Date(),
-        required: false
+        required: true
     },
     comment: [commentSchema],
     user: String
