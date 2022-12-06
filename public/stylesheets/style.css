@@ -46,13 +46,15 @@ body {
 
 .google {
   text-align: center;
+  text-decoration: underline;
   font-size: 1.5rem;
   margin-right: 30px;
-  color:rgb(203, 249, 0);
+  color: rgb(246, 246, 246);
+  transition: 0.2s;
 }
 
 .google:hover {
-  color:rgb(181, 221, 0);
+  color: rgb(216, 216, 216);
 }
 
 li {
